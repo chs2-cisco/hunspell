@@ -16,7 +16,7 @@ set(lib_headers
 add_library(${libname}
 	${lib_sources})
 
-add_definitions(-DBUILDING_LIBHUNSPELL)
+add_definitions(-DBUILDING_LIBHUNSPELL -DHUNSPELL_STATIC)
 
 set_target_properties(${libname} PROPERTIES PUBLIC_HEADER "${lib_headers}")
 set_property(TARGET ${libname} PROPERTY XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
