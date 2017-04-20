@@ -18,8 +18,12 @@ add_library(${libname}
 
 add_definitions(-DBUILDING_LIBHUNSPELL -DHUNSPELL_STATIC)
 
+if (APPLE)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
+	set(CMAKE_OSX_ARCHITECTURES x86_64)
+endif()
+
 set_target_properties(${libname} PROPERTIES PUBLIC_HEADER "${lib_headers}")
-set_property(TARGET ${libname} PROPERTY XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY "libc++")
 
 install(TARGETS ${libname}
 	ARCHIVE DESTINATION lib
