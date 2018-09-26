@@ -13,10 +13,10 @@ set(lib_headers
 	hunspell.hxx hunspell.h hunvisapi.h
 	w_char.hxx atypes.hxx csutil.hxx htypes.hxx)
 
-add_library(${libname}
+add_library(${libname} SHARED
 	${lib_sources})
 
-add_definitions(-DBUILDING_LIBHUNSPELL -DHUNSPELL_STATIC)
+add_definitions(-DBUILDING_LIBHUNSPELL)
 
 if (APPLE)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
