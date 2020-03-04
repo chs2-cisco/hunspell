@@ -1,3 +1,19 @@
+# BTUC:19893 make hunspell dynamically linked
+# Sep 26, 2018, Bala Chellappan (Cisco Systems, Inc.)
+
+# CMake: Fix flags for OS-X libc++
+# Apr 20, 2017, Jukka Lehtniemi (Cisco Systems, Inc.)
+
+# CMake: declare that we build static lib
+# Needed to define MSVC declspec correctly.
+# Apr 19, 2017, Jukka Lehtniemi (Cisco Systems, Inc.)
+
+# CMake build: Use libc++ on OS-X
+# Apr 19, 2017, Jukka Lehtniemi (Cisco Systems, Inc.)
+
+# Add initial CMake build scripts
+# Apr 18, 2017, Jukka Lehtniemi (Cisco Systems, Inc.)
+
 set(libname hunspell)
 
 set(lib_sources
